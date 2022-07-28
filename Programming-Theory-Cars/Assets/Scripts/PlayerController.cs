@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     private float verticalInput;
     private float horizontalInput;
 
+    private Vector3 offset = new Vector3(0, 8, -10);
+
 
     private void Start()
     {
@@ -25,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
     public void LateUpdate()
     {
-        playerCamera.transform.position = gameObject.transform.position;
+        playerCamera.transform.position = gameObject.transform.position + offset;
     }
 
     public void FixedUpdate()
