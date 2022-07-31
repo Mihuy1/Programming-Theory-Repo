@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,8 +12,8 @@ public class PlayerController : MonoBehaviour
 
     protected int horsePower;
 
-    [SerializeField]
-    private float rotationSpeed = 45f;
+    // ENCAPSULATION
+    public float rotationSpeed { get; private set; }
 
     private float verticalInput;
     private float horizontalInput;
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         playerRb = GetComponent<Rigidbody>();
+        rotationSpeed = 45;
     }
 
     public void LateUpdate()
@@ -35,6 +37,8 @@ public class PlayerController : MonoBehaviour
         Debug.Log(horsePower);
         VehicleControl();
     }
+
+    // ABSTRACTION
 
     public virtual void VehicleControl()
     {

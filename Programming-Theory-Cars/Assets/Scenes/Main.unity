@@ -892,7 +892,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 534669904}
-  rotationSpeed: 45
 --- !u!54 &858651192
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1066,7 +1065,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 534669904}
-  rotationSpeed: 45
 --- !u!1 &1011360241
 GameObject:
   m_ObjectHideFlags: 0
@@ -1954,7 +1952,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 534669904}
-  rotationSpeed: 45
 --- !u!54 &1503934778
 Rigidbody:
   m_ObjectHideFlags: 0

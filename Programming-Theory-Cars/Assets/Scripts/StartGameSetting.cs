@@ -31,6 +31,7 @@ public class StartGameSetting : MonoBehaviour
         Panel.SetActive(false);
     }
 
+    // ABSTRACTION
     public void SetCar(bool car)
     {
         playerCar.SetActive(true);

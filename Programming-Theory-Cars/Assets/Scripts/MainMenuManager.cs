@@ -22,6 +22,7 @@ public class MainMenuManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    // ABSTRACTION
     public void StartGame()
     {
         SceneManager.LoadScene("Main");
