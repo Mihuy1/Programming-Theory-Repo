@@ -9,8 +9,8 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody playerRb;
 
-    [SerializeField]
-    private int horsePower = 10;
+    protected int horsePower;
+
     [SerializeField]
     private float rotationSpeed = 45f;
 
@@ -27,16 +27,26 @@ public class PlayerController : MonoBehaviour
 
     public void LateUpdate()
     {
-        playerCamera.transform.position = gameObject.transform.position + offset;
+        CameraPositioning();
     }
 
     public void FixedUpdate()
+    {
+        Debug.Log(horsePower);
+        VehicleControl();
+    }
+
+    public virtual void VehicleControl()
     {
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
         playerRb.AddRelativeForce(Vector3.forward * verticalInput * horsePower);
         transform.Rotate(Vector3.up, Time.deltaTime * rotationSpeed * horizontalInput);
+    }
 
+    void CameraPositioning()
+    {
+        playerCamera.transform.position = gameObject.transform.position + offset;
     }
 }
